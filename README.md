@@ -1,1 +1,1 @@
-wWestern Book Publishing
+Western Book Publishing
