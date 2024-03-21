@@ -89,6 +89,44 @@ body {
 }
 
 /* --------------------------
+    WHATSAPP BUTTON
+-------------------------- */
+
+.whatsapp .whatsapp-btn {
+  position: fixed;
+  right: -65px;
+  bottom: 45%;
+  transform: rotate(-90deg);
+  text-align: center;
+  font-size: 25px;
+  padding: 3px 20px;
+  color: #fff;
+  background: #4CAF50;
+  border: 1px solid #4CAF50;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  z-index: 9999;
+}
+
+.whatsapp-btn span {
+  text-transform: uppercase;
+  padding-right: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.whatsapp .whatsapp-btn:hover {
+  background: #fff;
+  color: #4CAF50;
+  border: 1px solid #4CAF50;
+}
+
+/* --------------------------
     CUSTOM BUTTONS
 -------------------------- */
 
@@ -190,7 +228,7 @@ body {
   z-index: 10;
 }
 
-.overlay-content form .row{
+.overlay-content form .row {
   background-color: #fff;
 }
 
@@ -359,7 +397,7 @@ select.sel-color-chnage option {
     HERO SECTION
 -------------------------- */
 
-.popup-trigger{
+.popup-trigger {
   text-transform: uppercase;
   font-size: 11px;
   padding: 10px 15px;
@@ -377,7 +415,7 @@ select.sel-color-chnage option {
   color: var(--primary-color);
 }
 
-button.get-in-touch-wrap{
+button.get-in-touch-wrap {
   z-index: 9999999;
   right: 4rem;
   top: 17px;
@@ -550,7 +588,7 @@ button.get-in-touch-wrap-r:hover {
 }
 
 .navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
+.navbar-nav .active {
   -webkit-transform: scale(1);
   transform: scale(1);
   border-bottom: 2px solid var(--secondary-color);
@@ -968,6 +1006,10 @@ button.get-in-touch-wrap-r:hover {
   margin: 0;
 }
 
+.services-main .col-lg-3 {
+  width: 200px !important;
+}
+
 .services-main li {
   display: inline-block;
   text-align: center;
@@ -1023,8 +1065,8 @@ button.get-in-touch-wrap-r:hover {
 }
 
 .services-main li .serv-card {
-  width: 250px;
-  height: 220px;
+  width: 200px;
+  height: 180px;
   padding: 10px 20px;
   background: #fafdff;
   border: 2px solid #d5e2ff;
@@ -1045,7 +1087,7 @@ button.get-in-touch-wrap-r:hover {
 }
 
 .serv-card:hover .card-overlay {
-  transform: scale(6) translateZ(0);
+  transform: scale(5.4) translateZ(0);
 }
 
 .serv-card:hover .circle {
@@ -1072,7 +1114,7 @@ button.get-in-touch-wrap-r:hover {
 }
 
 .serv-card h1 {
-  font-size: 20px;
+  font-size: 15px;
   text-transform: capitalize;
   color: #4c5656;
   margin-top: 30px;
@@ -1080,15 +1122,9 @@ button.get-in-touch-wrap-r:hover {
   transition: color 0.3s ease-out;
 }
 
-.serv-card p {
-  font-size: 13px;
-  z-index: 1000;
-  transition: color 0.3s ease-out;
-}
-
 .serv-card .circle {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   background: #fff;
   border: 2px solid #fff;
@@ -1102,18 +1138,18 @@ button.get-in-touch-wrap-r:hover {
 
 .serv-card .circle:after {
   content: "";
-  width: 85px;
-  height: 85px;
+  width: 60px;
+  height: 60px;
   display: block;
   position: absolute;
   border-radius: 50%;
-  top: 5.5px;
-  left: 5.5px;
+  top: 5.2px;
+  left: 5.2px;
   transition: opacity 0.3s ease-out;
 }
 
 .serv-card .circle img {
-  width: 60px;
+  width: 40px;
   z-index: 10000;
   transform: translateZ(0);
 }
@@ -1121,16 +1157,16 @@ button.get-in-touch-wrap-r:hover {
 .serv-card .card-overlay {
   display: flex;
   justify-self: center;
-  width: 70px;
+  width: 58px;
   position: absolute;
-  height: 70px;
+  height: 58px;
   border-radius: 50%;
   background: var(--bg-img);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   filter: brightness(40%);
-  top: 45px;
+  top: 25px;
   z-index: 0;
   transition: transform 0.3s ease-out;
 }
@@ -1509,7 +1545,7 @@ footer {
 }
 
 .footer-content {
-  padding: 20px 0;
+  padding: 20px 0 0 0;
 }
 
 footer h5 {
@@ -1534,19 +1570,47 @@ footer h5 {
 .footer-about {
   display: block;
   float: left;
-  margin-right: 70pt;
   padding-bottom: 50px;
 }
 
-.footer-about p {
-  font-size: 14px;
-  color: #808080;
-  margin: 1.5rem 0 10px 0;
-}
-
-footer .footer-about img {
+footer .footer-about .ft-logo {
   width: 251px;
   height: 79px;
+  /* margin-left: 20px; */
+}
+
+
+.info-items {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding-left: 10px;
+  padding-right: 30px;
+}
+
+.info-items li {
+  display: flex;
+  align-items: center;
+  padding-block-end: 10px;
+}
+
+.info-items :where(p, a){
+  margin-bottom: 0;
+  color: #808080;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.info-items img {
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+}
+
+.info-items p:hover a {
+  color: #b1b1b1;
 }
 
 /* social */
@@ -1606,18 +1670,23 @@ footer .footer-about img {
   z-index: 1;
   transition: var(--trans-property);
 }
+
 .social-icons li:hover .social-icon.i-1 {
   color: #3b5998;
 }
+
 .social-icons li:hover .social-icon.i-2 {
   color: #dc2743;
 }
+
 .social-icons li:hover .social-icon.i-3 {
   color: #0e76a8;
 }
+
 .social-icons li:hover .social-icon.i-4 {
   color: #1da1f2;
 }
+
 .social-icons li:hover .social-icon.i-5 {
   color: #db4437;
 }
@@ -1627,15 +1696,14 @@ footer .footer-about img {
 }
 
 .social-icons .icon-2 {
-  background: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
+  background: linear-gradient(45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%);
 }
+
 .social-icons .icon-3 {
   background: #0e76a8;
 }
@@ -1693,4 +1761,41 @@ footer hr.footer-mob {
   margin-right: 1em;
   color: #808080d0;
   display: inline-block;
+}
+
+/* ------------------------------------------------------------------------------------
+                                  CONTACT US PAGE
+------------------------------------------------------------------------------------ */
+
+.contact-us {
+  background-image: linear-gradient(to bottom, rgba(4, 31, 54, 0.651), rgba(5, 27, 63, 0.795)),
+    url(../images/contact-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 86.7dvh;
+}
+
+.contact-pg {
+  display: flex;
+  flex-direction: column;
+  ;
+  text-align: center;
+  padding-top: 18rem;
+}
+
+.contact-pg h1 {
+  color: #f94444;
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 35px;
+}
+
+.contact-pg p {
+  color: #fff;
+  font-family: var(--primary-font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5em;
+  margin-bottom: 20px;
 }
