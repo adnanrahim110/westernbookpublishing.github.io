@@ -173,6 +173,59 @@
             </div>
         </section>
 
+        <section class="about-section-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <h2>BECOME A CELEBRITY AUTHOR WITH <span>WESTERN BOOK PUBLISHING</span></h2>
+                        <p>
+                            We offer a wide spectrum of ghostwriting services designed to cater to diverse literary
+                            needs. From fiction to nonfiction, memoirs to business books, our expert ghostwriters are
+                            adept at transforming ideas into compelling narratives. We understand the challenges and
+                            intricacies of the book production journey. Our mission is to make the process smooth and
+                            worthwhile, providing authors with the support and expertise needed to bring their visions
+                            to life. Quality is at the core of everything we do. Our commitment to delivering
+                            high-quality content is unwavering, ensuring that each project we undertake reflects
+                            the professionalism and creativity that define the Amazon Publishing Portal. Client
+                            satisfaction is our ultimate benchmark of success. We prioritize clear communication,
+                            collaboration, and tailored solutions to ensure that every client's experience with us
+                            exceeds expectations.
+                        </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="counter-wrap" id="counter">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="counter-item">
+                                        <img src="images/rate.png" alt="">
+                                        <h3><span class="count" data-count="120">120</span>+</h3>
+                                        <p>years of experiance</p>
+                                    </div>
+                                    <div class="counter-item">
+                                        <img src="images/books.png" alt="">
+                                        <h3><span class="count" data-count="280">280</span>+</h3>
+                                        <p>Books Internationally Acclaimed</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="counter-item">
+                                        <img src="images/literature.png" alt="">
+                                        <h3><span class="count" data-count="1500">1500</span>+</h3>
+                                        <p>Books Written</p>
+                                    </div>
+                                    <div class="counter-item">
+                                        <img src="images/quill-pen.png" alt="">
+                                        <h3><span class="count" data-count="550">550</span>+</h3>
+                                        <p>Native Writers</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="contact-section" id="contact">
             <div class="container">
                 <div class="col-12 col-sm-10 contact-box">
@@ -570,6 +623,22 @@
     <script src="js/slick.min.js"></script>
     <script src="js/uikit.min.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- COUNTER -->
+    <script>
+        $('.count').each(function () {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 3500,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+
+    </script>
 
 
     <!-- PORTFOLIO SECTION JS -->
