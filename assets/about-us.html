@@ -226,6 +226,124 @@
             </div>
         </section>
 
+        <section class="about-section-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="amz-portal">
+                            <div class="amz-textbox">
+                                <h2>Endless Literary Adventures with <span>western book publishing</span></h2>
+                                <p>
+                                    Becoming an author marks the commencement of a journey that extends far beyond the
+                                    creation of a single book.
+                                    The spark of creativity knows no bounds. As an author, your desire to pen down more
+                                    stories, insights,
+                                    and experiences is boundless. Amazon Publishing Portal is here to fuel that
+                                    perpetual flame,
+                                    supporting your continuous journey of expression. Our commitment is to help you
+                                    realize and live that dream, book after book.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="d-flex">
+                                        <li>
+                                            <a href="#">
+                                                <button class="custom-btn mt-4" type="button">
+                                                    <span class="button__text">Contact Us</span>
+                                                    <span class="button__icon"><i class="fa fa-id-badge"></i></span>
+                                                </button>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <button class="custom-btn mt-4" type="button">
+                                                    <span class="button__text">+92 123 456789</span>
+                                                    <span class="button__icon"><i class="fa fa-phone"
+                                                            aria-hidden="true"></i></span>
+                                                </button>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <img class="cta-img" src="images/cta-book.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-5 amaz-imgg">
+                        <div class="amazone-img">
+                            <img src="images/amazone.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="about-portfolio">
+            <div class="container-fluid">
+                <h1 class="text-center">Join the Ranks of Our Published Authors and Share Your Story with the World</h1>
+                <div class="about-ads_sponsors">
+                    <div>
+                        <img src="images/portfolio/p1.png" alt="" />
+                    </div>
+                    <div>
+                        <img src="images/portfolio/p2.png" alt="" />
+                    </div>
+                    <div>
+                        <img src="images/portfolio/p3.png" alt="" />
+                    </div>
+                    <div>
+                        <img src="images/portfolio/p4.png" alt="" />
+                    </div>
+                    <div>
+                        <img src="images/portfolio/p5.png" alt="" />
+                    </div>
+                    <div>
+                        <img src="images/portfolio/p6.png" alt="" />
+                    </div>
+                    <div>
+                        <img src="images/portfolio/p7.png" alt="" />
+                    </div>
+                    <div>
+                        <img src="images/portfolio/p8.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 left-img">
+                            <div class="book-slider">
+                                <div class="container">
+                                    <div class="slide x"></div>
+                                    <div class="slide y"></div>
+                                    <div class="slide z"></div>
+                                </div>
+                                <div class="shadow"></div>
+                            </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="container text-center booking-text">
+                            <h1>WANT TO WRITE YOUR OWN BOOK?</h1>
+                            <p class="para1">Your one-stop offering all writing, editing and publishing solutions</p>
+                            <div class="btns">
+                                <a href="#" class="btn bk-btn1">
+                                    <span>order now</span>
+                                </a>
+                                <a href="#" class="btn bk-btn2">
+                                    <span><i class="fa fa-phone"></i>&nbsp;+92 312 3456789</span>
+                                </a>
+                            </div>
+                            <p>Or Start A Live Chat to discuss your requirements</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="contact-section" id="contact">
             <div class="container">
                 <div class="col-12 col-sm-10 contact-box">
@@ -608,12 +726,10 @@
     </div>
 
     <!-- scroll to top -->
-    <div id="scroll-Top">
-        <div class="return-to-top">
-            <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title=""
-                data-original-title="Back to Top" aria-hidden="true"></i>
-        </div>
-
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
     </div>
 
 
@@ -626,18 +742,36 @@
 
     <!-- COUNTER -->
     <script>
-        $('.count').each(function () {
-            $(this).prop('Counter', 0).animate({
-                Counter: $(this).text()
-            }, {
-                duration: 3500,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
+        $(window).scroll(startCounter);
+        function startCounter() {
+            if ($(window).scrollTop() > 500) {
+                $(window).off("scroll", startCounter);
+                $('.count').each(function () {
+                    var $this = $(this);
+                    jQuery({
+                        Counter: 0
+                    }).animate({
+                        Counter: $this.text().replace(/,/g, '')
+                    }, {
+                        duration: 1500,
+                        easing: 'swing',
+                        step: function () {
+                            $this.text(commaSeparateNumber(Math.floor(this.Counter)));
+                        },
+                        complete: function () {
+                            $this.text(commaSeparateNumber(this.Counter));
+                            //alert('finished');
+                        }
+                    });
+                });
+                function commaSeparateNumber(val) {
+                    while (/(\d+)(\d{3})/.test(val.toString())) {
+                        val = val.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+                    }
+                    return val;
                 }
-            });
-        });
-
+            }
+        }
     </script>
 
 
