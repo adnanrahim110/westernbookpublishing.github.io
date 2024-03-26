@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/fontawesome.min.css" />
     <link rel="stylesheet" href="css/slick.min.css" />
+    <link rel="stylesheet" href="css/unicons.css">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
     <main>
-        <section id="hero" class="hero">
+        <section id="hero" class="contact-hero">
             <button class="popup-trigger get-in-touch-wrap" id="popup-trigger">
                 Need assistance?
             </button>
@@ -67,7 +68,7 @@
                             <a class="nav-link call-now" href="#">
                                 <img src="images/call.png" alt="" />
                                 <div class="call">
-                                    <span>Call Anytime:&nbsp;</span><span>+1 (737) 303-4658</span>
+                                    <span>+1 (737) 303-4658</span>
                                 </div>
                             </a>
                         </li>
@@ -75,6 +76,13 @@
                 </div>
             </nav>
             <header class="contact-us">
+                <div class="video-wrap">
+                    <video autoplay loop muted class="custom-video">
+                        <source src="images/bookwritingvideo-1.webm" type="video/mp4" />
+
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
                 <section class="contact-header">
                     <div class="container contact-pg">
                         <h1>Have a Book Idea to Discuss? Connect with Us!</h1>
@@ -307,7 +315,7 @@
                     </ul>
                 </div>
                 <div class="col-12 col-md-12 col-lg-12 contact-info text-center">
-                    
+
                 </div>
             </div>
             <hr />
@@ -460,10 +468,18 @@
         </div>
     </div>
 
+    <!-- WHATSAPP BUTTON -->
     <div class="whatsapp">
         <button class="whatsapp-btn" id="popup-trigger">
             <span>WhatsApp</span><i class="fa-brands fa-whatsapp"></i>
         </button>
+    </div>
+
+    <!-- scroll to top -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
     </div>
 
 
@@ -474,107 +490,6 @@
     <script src="js/main.js"></script>
 
 
-    <!-- PORTFOLIO SECTION JS -->
-    <script>
-        var carousel = $(".carousel"),
-            items = $(".item"),
-            currdeg = 0,
-            intervalId = null,
-            rotationInProgress = false;
-
-        var mouseDownX = 0;
-        var mouseUpX = 0;
-
-        $(".carousel").on("mousedown", function (event) {
-            mouseDownX = event.pageX;
-            stopRotation();
-        });
-
-        $(".carousel").on("mousemove", function (event) {
-            if (mouseDownX !== 0) {
-                mouseUpX = event.pageX;
-            }
-        });
-
-        $(".carousel").on("mouseup", function (event) {
-            if (mouseDownX !== 0) {
-                handleSwipe();
-            }
-            mouseDownX = 0;
-            mouseUpX = 0;
-            startRotation();
-        });
-
-        function handleSwipe() {
-            var swipeThreshold = 50; // Minimum swipe distance required to trigger a rotation
-
-            if (mouseUpX - mouseDownX > swipeThreshold) {
-                // Swipe right
-                rotate({ data: { d: "p" } });
-            } else if (mouseDownX - mouseUpX > swipeThreshold) {
-                // Swipe left
-                rotate({ data: { d: "n" } });
-            }
-        }
-
-        function rotate(e) {
-            if (rotationInProgress) {
-                return; // Ignore rotation request if it's already in progress
-            }
-
-            rotationInProgress = true;
-
-            if (e.data.d == "n") {
-                currdeg = currdeg - 60;
-            }
-            if (e.data.d == "p") {
-                currdeg = currdeg + 60;
-            }
-            carousel.css({
-                "-webkit-transform": "rotateY(" + currdeg + "deg)",
-                "-moz-transform": "rotateY(" + currdeg + "deg)",
-                "-o-transform": "rotateY(" + currdeg + "deg)",
-                "transform": "rotateY(" + currdeg + "deg)"
-            });
-            items.css({
-                "-webkit-transform": "rotateY(" + (-currdeg) + "deg)",
-                "-moz-transform": "rotateY(" + (-currdeg) + "deg)",
-                "-o-transform": "rotateY(" + (-currdeg) + "deg)",
-                "transform": "rotateY(" + (-currdeg) + "deg)"
-            });
-
-            setTimeout(function () {
-                rotationInProgress = false;
-            }, 1000); // Set rotationInProgress to false after 1 second to allow rotation to complete
-        }
-
-        function startRotation() {
-            if (intervalId === null) {
-                intervalId = setInterval(function () {
-                    rotate({ data: { d: "n" } });
-                }, 2000);
-            }
-        }
-
-        function stopRotation() {
-            if (intervalId !== null) {
-                clearInterval(intervalId);
-                intervalId = null;
-            }
-        }
-
-        // Start the rotation initially
-        startRotation();
-
-        // Detect visibility change and stop/start rotation accordingly
-        document.addEventListener("visibilitychange", function () {
-            if (document.visibilityState === "hidden") {
-                stopRotation();
-            } else if (document.visibilityState === "visible") {
-                startRotation();
-            }
-        });
-    </script>
 </body>
 
 </html>

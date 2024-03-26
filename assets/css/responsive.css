@@ -52,7 +52,7 @@
         --btn-hover-color: #fff;
         --width: 180px;
         --height: 35px;
-        --transform: translateX(141px);
+        --transform: translateX(142px);
         --icon-size: 16px;
         --font-size: 12px;
         background-color: transparent;
@@ -73,8 +73,7 @@
     .uk-container p {font-size: 10px;}
     .about-text .head-btns {margin-top: 50px;}
     .about-text .head-btns .btn{ font-size: 13px; padding: 10px 40px;}
-    .about-text .head-btns .ab-btn1{margin-right: 0; margin-bottom: 20px;}
-    .about-text .head-btns .ab-btn2{margin-left: 0;}
+    section.about-section-2{overflow: hidden;}
 }
 
 /* MOBILE PHONES */
@@ -96,6 +95,26 @@
     .social-icons {display: flex; flex-direction: row; gap: 25px; justify-content: center; padding-left: 0;}
     .social-icons li {width: 50px; height: 45px;}
     .social-icons li::after{width: 50px; height: 35px; transform: translate(0, 45px);}
+    .about-section-1 {padding: 50px 10px;}
+    .about-section-1 h2{font-size: 19px;margin-bottom: 20px;}
+    .about-section-1 p{font-size: 13px;}
+    .about-text .head-btns .ab-btn1{margin-right: 0; margin-bottom: 20px;}
+    .about-text .head-btns .ab-btn2{margin-left: 0;}
+    .amz-textbox h2{font-size: 18px;}
+    .amz-textbox p{font-size: 12px;}
+    .about-section-2 .d-flex{margin-top: 10px;gap: 0; margin-left: 35%;}
+    .counter-item img {height: 40px;}
+    .counter-item h3 {margin-top: 20px;}
+    img.cta-img{bottom: 0;left: 10px; width: 120px;}
+    .about-section-2 .custom-btn{width: 150px;} .about-section-2 .custom-btn .button__text{font-size: 11px;}
+    .about-section-2 .custom-btn .button__icon{transform: translateX(113px);}
+    .about-section-2 .custom-btn:hover .button__icon{width: 150px;}
+    .about-portfolio h1{font-size: 20px;margin-bottom: 20px;padding-bottom: 20px;}
+    .about-ads_sponsors div img{height: 130px; width: 65px;}
+    .slick-arrow{font-size: 10px;width: 60px;}
+    .bk-btn1{margin-right: 0;} .bk-btn2{margin-left: 0; margin-top: 20px;}
+    .para2 {font-size: 12px;}
+    .whatsapp .whatsapp-btn{right: -62px;}
 }
 @media only screen and (min-width: 320px) and (max-width:992px){
     .nav-hr{display: none;}
@@ -107,6 +126,7 @@
     .nav-link.call-now img {height: 20px;}
     .call-now .call {flex-direction: row; align-items: center;}
     .call span:first-child{margin: 0;}
+    .slick-arrow.slick-next{margin-left: 80%;}
 }
 /* IPADS & TABLETS */
 @media only screen and (max-width: 767px) and (min-width: 481px)  {
@@ -117,6 +137,15 @@
     .f-serv {max-width: 200px; padding-right: 0;}
     .info-items {justify-content: center; align-items: center;}
     .info-items li {flex-direction: column; justify-content: center;}
+    .about-section-1{padding: 50px 10px;}
+    .about-section-1 h2{font-size: 25px;margin-bottom: 20px;}
+    .about-section-1 p{font-size: 12px;}
+    .amz-textbox h2{font-size: 23px;}
+    .amz-textbox p{font-size: 12px;}
+    .about-section-2 .d-flex{margin-left: 45%;margin-top: 20px;}
+    img.cta-img{left: 20px;}
+    .about-portfolio h1{font-size: 18px; padding-inline: 20px;}
+    .about-ads_sponsors div img {width: 100px; height: 150px;}
 }
 @media only screen and (max-width: 540px) and (min-width: 481px) {
     .f-serv.company {max-width: 150px; padding-inline: 0;}
@@ -171,6 +200,22 @@
     .info-items img {width: 20px; height: 20px;}
     .info-items :where(p, a) {font-size: 11px;}
     .contact-pg {padding-top: 20rem; padding-inline: 40px;}
+    .about-text .head-btns{display: flex; justify-content: center;}
+    .about-text .head-btns .btn{font-size: 12px;padding: 10px 50px;}
+    .amazone-img img{height: 430px;}
+    .amz-textbox h2{font-size: 18px;}
+    .amz-textbox p{font-size: 12px;}
+    .about-section-2 .d-flex {margin-top: 20px; margin-left: 35%;}
+    img.cta-img{bottom: -10px; width: 130px;}
+    .about-portfolio h1 {padding-inline: 20px;}
+    .about-ads_sponsors div img {height: 200px;}
+    .booking-text{padding-right: 30px;}
+    .booking-text h1{font-size: 21px;}
+    .booking-text .para1 {font-size: 12px;}
+    .bk-btn2{font-size: 18px;}
+    .para2{font-size:12px;}
+    .book-slider{width: 150px; height: 150px; -webkit-perspective: 100000px;perspective: 100000px;}
+    .book-slider{left: 60px;}
 }
 @media only screen and (min-width: 992px) and (max-width: 1070px)  {
     .info-items img {width: 30px; height: 30px;}
