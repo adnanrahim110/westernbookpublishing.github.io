@@ -560,6 +560,7 @@ button.get-in-touch-wrap-r:hover {
 
 .header-hero  {
   position: relative;
+  background: url(../images/WBP\ Logo\ 3\ Final\ 3\ OK-04\ \(1\)\ \(1\)\ \(1\).png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -570,6 +571,15 @@ button.get-in-touch-wrap-r:hover {
 
 .video-wrap {
   z-index: -1;
+}
+
+.video-wrap img{
+  position: absolute;
+  width: 28rem;
+  height: 87dvh;
+  top: 5rem;
+  left: 45%;
+  object-fit: contain;
 }
 
 .custom-video {
@@ -805,33 +815,44 @@ button.get-in-touch-wrap-r:hover {
 
 .header-sec1 .main-text {
   color: #fff;
-  margin: 53dvh 0 2rem 3rem;
-  width: 40rem;
-  position: relative;
+  margin: 30dvh 0 2rem 3rem;
+  width: 38rem;
 }
 
 .amz-img {
-  position: absolute;
-  z-index: 3;
-  margin-top: -18%;
-  margin-left: 61.5%;
+  margin-top: 5px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 .amz-img img {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 40px;
+  margin-inline: 10px;
+}
+.amz-img img:nth-child(1) {
+  margin-inline: 0;
+  width: 60px;
+  height: 60px;
+}
+.amz-img img:last-child {
+  width: 90px;
+  height: 30px;
 }
 
 .main-text h1 {
   font-family: "roundkey-bold";
-  font-size: 5rem;
+  font-size: 3.5rem;
   font-style: italic;
   display: inline;
 }
 
 .main-text p {
-  margin-top: -10px;
+  font-size: 14px;
+  font-weight: 600;
 }
+
 
 .header-sec2 {
   /* background-image: url(../images/WBP\ Web\ Template-04.png); */
@@ -849,9 +870,10 @@ button.get-in-touch-wrap-r:hover {
 
 .header .get-started {
   background-color: #e3e2e29e;
-  height: 28rem;
+  height: 30rem;
   display: flex;
   flex-direction: column;
+  border-radius: 30px;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -2630,3 +2652,91 @@ img.cta-img {
 		90%, 99% {transform: rotateY(0deg) rotateX(90deg);}
 		99.1%, 99.9% {transform: rotateY(180deg) rotateX(90deg) translatez(5px); opacity: 0.95; filter: alpha(opacity=95);}
 	}*/
+
+
+/* ------------------------------------------------------------------------------------
+                                  ABOUT US PAGE
+------------------------------------------------------------------------------------ */
+
+.test-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.test-section::after {
+  content: "TESTIMONIALS";
+  justify-content: center;
+  display: flex;
+  -webkit-text-stroke: 2px #000;
+  font-size: 180px;
+  left: 20px;
+  font-weight: 600;
+  right: 0;
+  position: absolute;
+  top: -50px;
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  -webkit-text-stroke: 1px #0000000a;
+  font-family: "Agency FB";
+  z-index: 1;
+  letter-spacing: 35px;
+  transition: 0.7s;
+}
+
+.test-section:hover::after {
+  letter-spacing: unset;
+}
+
+.test-card {
+  padding: 2rem;
+  background-color: #ffff;
+  border-radius: 25px;
+  box-shadow: 0 0 15px 0 #0000007a !important;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 470px;
+  position: relative;
+  z-index: 2 ;
+}
+
+.test-card:hover {
+  background-color: #fc9700;
+  color: #000;
+}
+
+h5.test-card-title {
+  font-size: 2rem;
+  font-weight: 700;
+  transition: 0.5s;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.test-card-body .quote {
+  transition: 0.5s;
+  position: absolute;
+}
+
+.test-card:hover .quote {
+  left: 3rem;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  top: 4rem;
+  bottom: 0;
+  font-size: 250px;
+  color: #00000014;
+}
+
+p.test-card-text {
+  color: #000;
+  margin-top: 40px;
+}
+
+.fa-quote-right:before {
+  content: "\f10e";
+}
