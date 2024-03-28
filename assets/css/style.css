@@ -124,17 +124,18 @@ body::-webkit-scrollbar-thumb {
 
 .whatsapp .whatsapp-btn {
   position: fixed;
-  right: -65px;
-  bottom: 45%;
+  right: -4px;
+  bottom: 40%;
   transform: rotate(-90deg);
   text-align: center;
   font-size: 25px;
-  padding: 3px 20px;
+  width: 50px;
+  height: 45px;
   color: #fff;
   background: #4CAF50;
   border: 1px solid #4CAF50;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   -webkit-transition: .5s;
   -moz-transition: .5s;
   -ms-transition: .5s;
@@ -143,17 +144,10 @@ body::-webkit-scrollbar-thumb {
   z-index: 9999;
 }
 
-.whatsapp-btn span {
-  text-transform: uppercase;
-  padding-right: 10px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
 .whatsapp .whatsapp-btn:hover {
   background: #fff;
   color: #4CAF50;
-  border: 1px solid #4CAF50;
+  border: 3px solid #4CAF50;
 }
 
 .progress-wrap {
@@ -242,6 +236,83 @@ body::-webkit-scrollbar-thumb {
   box-sizing: border-box;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
+}
+
+.share-menu {
+  position: fixed;
+  z-index: 9999;
+  /* position: relative; */
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: -6.4rem;
+  top: 26%;
+}
+
+.share-menu .btn_toggle {
+  position: relative;
+  height: 50px;
+  width: 45px;
+  background: #0077ff;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  /* border-bottom-left-radius: 30px; */
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 1.25s;
+  z-index: 5;
+}
+
+.share-menu.active .btn_toggle {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15),
+      0 0 0 2px #333,
+      0 0 0 8px #fff;
+}
+
+.share-menu li {
+  z-index: 9999;
+  position: absolute;
+  left: 0;
+  list-style: none;
+  transition: 0.5s;
+  transform: rotate(calc(110deg/3  * var(--i)));
+  transform-origin: 140px;
+  scale: 0;
+  transition-delay: calc(0.05s * var(--i));
+}
+
+.share-menu.active li {
+  scale: 1;
+}
+
+.share-menu li a {
+  position: relative;
+  display: flex;
+  transform: rotate(calc(-90deg/-3 * var(--i)));
+  width: 60px;
+  height: 60px;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.75rem;
+  color: var(--clr);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+}
+
+.share-menu li:hover a {
+  font-size: 2.5rem;
+  box-shadow: 0 0 0 2px var(--clr),
+      0 0 0 6px #fff;
 }
 
 /* --------------------------
@@ -560,7 +631,8 @@ button.get-in-touch-wrap-r:hover {
 
 .header-hero  {
   position: relative;
-  background: url(../images/WBP\ Logo\ 3\ Final\ 3\ OK-04\ \(1\)\ \(1\)\ \(1\).png);
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), #01267b88, rgba(0, 0, 0, 0.6), #a9121589), url(../images/bg-1.png);
+  /* background-color: #0e0e64; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -805,12 +877,10 @@ button.get-in-touch-wrap-r:hover {
 }
 
 .header-sec1 {
-  /* background-image: url(../images/WBP-Web-Template.jpg); */
   background: transparent;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /* height: 100dvh; */
 }
 
 .header-sec1 .main-text {
@@ -855,7 +925,6 @@ button.get-in-touch-wrap-r:hover {
 
 
 .header-sec2 {
-  /* background-image: url(../images/WBP\ Web\ Template-04.png); */
   background: transparent;
   background-position: center;
   background-size: cover;
@@ -2739,4 +2808,218 @@ p.test-card-text {
 
 .fa-quote-right:before {
   content: "\f10e";
+}
+
+/* ------------------------------------------------------------------------------------
+                                  SERVICES PAGES
+------------------------------------------------------------------------------------ */
+
+/* ----------------------
+    GHOST WRITING PAGE
+---------------------- */
+
+.ghost-hero  {
+  position: relative;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),  url(../images/bg-01.jpg);
+  /* background-color: #0e0e64; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100dvh;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.ghost-hero .header-sec1 .main-text {
+  color: #fff;
+  margin: 30dvh 0 2rem 3rem;
+  width: 45rem;
+}
+
+.gst-btns {
+  margin-top: 20px;
+}
+
+.gst-btns .btn {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  padding: 10px 50px;
+  margin-inline: 10px;
+  transition: all .3s ease-out;
+}
+
+.gst-btns .gw-btn1 {
+  background-color: var(--secondary-color);
+  border: 2px solid transparent;
+}
+
+.gst-btns .gw-btn2 {
+  border: 2px solid #fff;
+}
+
+.gst-btns .btn:hover {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: var(--primary-color);
+  box-shadow: 5px 5px 5px #003ac276;
+  animation: shake 2s ease;
+}
+
+
+.toggle_btn #checkbox {
+  display: none;
+}
+
+.toggle_btn .toggle {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition-duration: .5s;
+}
+
+.toggle_btn .bars {
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+}
+
+.toggle_btn #bar2 {
+  transition-duration: .8s;
+}
+
+.toggle_btn #bar1,#bar3 {
+  width: 70%;
+}
+
+.toggle_btn #checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: .5s;
+}
+
+.toggle_btn #checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: .5s;
+}
+
+.toggle_btn #checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: .5s;
+}
+
+.toggle_btn #checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: .5s;
+}
+
+.toggle_btn #checkbox:checked + .toggle {
+  transition-duration: .5s;
+  transform: rotate(180deg);
+}
+
+.toggle_btn {
+  float: right;
+  margin-right: 20px;
+}
+
+/* service body */
+
+.service-sidebar {
+  background-color: #f7f7f7;
+  border-right: 1px solid var(--secondary-color);
+  padding: 40px 0;
+}
+
+.service-sidebar.col-lg-2 {
+  max-width: 230px;
+}
+
+.service-sidebar h1 {
+  color: #000;
+  font-size: 27px;
+  text-align: start;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.side-services {
+  padding-left: 0;
+}
+
+.side-item {
+  padding: 20px 10px 20px 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  transition: all 0.2s ease-out;
+}
+
+.side-item:first-child {
+  border-top: 1px solid #fff;
+}
+
+.side-item:hover,
+.side-item.active {
+  background-color: #606060;
+}
+
+.side-item:hover .side-link,
+.side-item.active .side-link {
+  color: #fff;
+}
+
+.side-link {
+  color: #6c6c6c;
+  font-size: 13px;
+}
+
+.side-item img {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+.service-sec {
+  padding: 5rem 20px;
+}
+
+.service-sec h2 {
+  font-family: var(--primary-font-family);
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 2;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.service-sec img {
+  margin-top: 50px;
+  width: 450px;
+  height: 450px;
+}
+
+.service-sec h3 {
+  font-family: var(--secondary-font-family);
+  font-size: 45px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.service-sec p {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.text-sec {
+  margin-top: 40px;
 }

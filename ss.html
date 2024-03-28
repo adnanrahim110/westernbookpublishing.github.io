@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Magic Indicator inspired Social Share Menu</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* .share-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #262433;
+    } */
+
+    .share-menu {
+        position: relative;
+        width: 280px;
+        height: 280px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .share-menu .toggle {
+        position: relative;
+        height: 60px;
+        width: 60px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #333;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: 1.25s;
+        z-index: 5;
+    }
+
+    .share-menu.active .toggle {
+        transform: rotate(360deg);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15),
+            0 0 0 2px #333,
+            0 0 0 8px #fff;
+    }
+
+    .share-menu li {
+        position: absolute;
+        left: 0;
+        list-style: none;
+        transition: 0.5s;
+        transform: rotate(calc(360deg/8 * var(--i)));
+        transform-origin: 140px;
+        scale: 0;
+        transition-delay: calc(0.05s * var(--i));
+    }
+
+    .share-menu.active li {
+        scale: 1;
+    }
+
+    .share-menu li a {
+        position: relative;
+        display: flex;
+        transform: rotate(calc(360deg/-8 * var(--i)));
+        width: 60px;
+        height: 60px;
+        background-color: #FFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 1.75rem;
+        color: var(--clr);
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+        transition: 0.5s;
+    }
+
+    .share-menu li:hover a {
+        font-size: 2.5rem;
+        box-shadow: 0 0 0 2px var(--clr),
+            0 0 0 6px #fff;
+    }
+</style>
+
+<body>
+    <div class="share-btn">
+        <div class="share-menu">
+            <div class="toggle">
+                <ion-icon name="share-social"></ion-icon>
+            </div>
+
+            <li style="--i:0;--clr:#1877f2">
+                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            </li>
+            <li style="--i:1;--clr:#25d366">
+                <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            </li>
+            <li style="--i:2;--clr:#1da1f2">
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            </li>
+        </div>
+    </div>
+
+    <script>
+        const menu = document.querySelector(".share-menu");
+        const toggle = document.querySelector(".toggle");
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        })
+    </script>
+    <!-- partial -->
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
