@@ -122,34 +122,6 @@ body::-webkit-scrollbar-thumb {
     SIDE BUTTONS
 -------------------------- */
 
-.whatsapp .whatsapp-btn {
-  position: fixed;
-  right: -4px;
-  bottom: 40%;
-  transform: rotate(-90deg);
-  text-align: center;
-  font-size: 25px;
-  width: 50px;
-  height: 45px;
-  color: #fff;
-  background: #4CAF50;
-  border: 1px solid #4CAF50;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  -webkit-transition: .5s;
-  -moz-transition: .5s;
-  -ms-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
-  z-index: 9999;
-}
-
-.whatsapp .whatsapp-btn:hover {
-  background: #fff;
-  color: #4CAF50;
-  border: 3px solid #4CAF50;
-}
-
 .progress-wrap {
   position: fixed;
   right: 30px;
@@ -238,17 +210,45 @@ body::-webkit-scrollbar-thumb {
   transition: all 200ms linear;
 }
 
+.whatsapp .whatsapp-btn {
+  position: fixed;
+  right: 0;
+  bottom: 13.2rem;
+  padding-left: 5px;
+  text-align: center;
+  font-size: 2rem;
+  width: 45px;
+  height: 50px;
+  color: #fff;
+  background: #4CAF50;
+  border: 1px solid #4CAF50;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  z-index: 99999;
+}
+
+.whatsapp .whatsapp-btn:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15),
+      0 0 0 2px #333,
+      0 0 0 8px #fff;
+}
+
 .share-menu {
   position: fixed;
   z-index: 9999;
-  /* position: relative; */
   width: 250px;
   height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
   right: -6.4rem;
-  top: 26%;
+  bottom: 11rem;
 }
 
 .share-menu .btn_toggle {
@@ -258,7 +258,6 @@ body::-webkit-scrollbar-thumb {
   background: #0077ff;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  /* border-bottom-left-radius: 30px; */
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
@@ -270,7 +269,8 @@ body::-webkit-scrollbar-thumb {
   z-index: 5;
 }
 
-.share-menu.active .btn_toggle {
+.share-menu.active .btn_toggle,
+.btn_toggle:hover {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15),
       0 0 0 2px #333,
       0 0 0 8px #fff;
@@ -295,7 +295,7 @@ body::-webkit-scrollbar-thumb {
 .share-menu li a {
   position: relative;
   display: flex;
-  transform: rotate(calc(-90deg/-3 * var(--i)));
+  transform: rotate(calc(110deg/-3 * var(--i)));
   width: 60px;
   height: 60px;
   background-color: #FFF;
@@ -305,7 +305,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 50%;
   font-size: 1.75rem;
   color: var(--clr);
-  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.45);
   transition: 0.5s;
 }
 
@@ -371,6 +371,30 @@ body::-webkit-scrollbar-thumb {
 
 .custom-btn:active {
   border: 1px solid var(--btn-hover-color);
+}
+
+.down_arrow {
+  bottom: 10px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  right: 49%;
+}
+
+.down_arrow img:first-child{
+  width: 50px;
+  height: 50px;
+  margin-bottom: -15px;
+}
+
+.down_arrow img {
+  width: 30px;
+  height: 30px;
+  animation: bounce 2s infinite ease-in-out;
+  -webkit-animation: bounce 2s infinite ease-in-out;
 }
 
 /*---------------------------------------
@@ -621,6 +645,8 @@ button.get-in-touch-wrap-r {
   color: #fff;
   transition: all 0.3s ease;
   overflow: hidden;
+  animation: fadeInDown 1.3s linear;
+  animation-delay: 0s;
 }
 
 button.get-in-touch-wrap-r:hover {
@@ -674,6 +700,8 @@ button.get-in-touch-wrap-r:hover {
   top: 0;
   width: 100%;
   z-index: 9999;
+  animation: fadeInDown 1s linear;
+  animation-delay: 0s;
 }
 
 #NavBar.sticky .nav-link {
@@ -885,7 +913,7 @@ button.get-in-touch-wrap-r:hover {
 
 .header-sec1 .main-text {
   color: #fff;
-  margin: 30dvh 0 2rem 3rem;
+  margin: 30dvh 0 2rem 2rem;
   width: 38rem;
 }
 
@@ -913,7 +941,7 @@ button.get-in-touch-wrap-r:hover {
 
 .main-text h1 {
   font-family: "roundkey-bold";
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-style: italic;
   display: inline;
 }
@@ -939,7 +967,7 @@ button.get-in-touch-wrap-r:hover {
 
 .header .get-started {
   background-color: #e3e2e29e;
-  height: 30rem;
+  height: 28rem;
   display: flex;
   flex-direction: column;
   border-radius: 30px;
@@ -1100,7 +1128,7 @@ button.get-in-touch-wrap-r:hover {
   --btn-hover-color: var(--hover-color);
   --width: 180px;
   --height: 35px;
-  --transform: translateX(140px);
+  --transform: translateX(141px);
   --font-size: 20px;
   --icon-size: 16px;
 }
@@ -1746,7 +1774,7 @@ button.get-in-touch-wrap-r:hover {
   border: 2px solid #fff;
 }
 
-.contact-btn .custom-btn .button__icon {
+.contact-section .custom-btn .button__icon {
   color: var(--primary-color);
 }
 
@@ -2333,7 +2361,7 @@ img.cta-img {
 }
 
 .about-portfolio {
-  padding: 50px 0;
+  padding: 50px 0 80px 0;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, .9)),
     url(../images/portfolio/portfolio.jpg);
   background-size: cover;
@@ -2381,7 +2409,7 @@ img.cta-img {
 .booking {
   background-color: transparent;
   background-image: linear-gradient(180deg, #385eb7 0%, #0a2c79 100%);
-  margin-top: 60px;
+  padding-top: 30px;
   color: #fff;
 }
 
@@ -2656,7 +2684,7 @@ img.cta-img {
   animation: rotateShadow 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
 }
 
-@-webkit-keyframes rotateShadow {
+@keyframes rotateShadow {
 
   0%,
   10% {
@@ -2926,9 +2954,14 @@ p.test-card-text {
   transform: rotate(180deg);
 }
 
+.service-body {
+  position: relative;
+}
+
 .toggle_btn {
-  float: right;
-  margin-right: 20px;
+  position: absolute;
+  top: 105px;
+  left: 10px;
 }
 
 /* service body */
@@ -2936,7 +2969,7 @@ p.test-card-text {
 .service-sidebar {
   background-color: #f7f7f7;
   border-right: 1px solid var(--secondary-color);
-  padding: 40px 0;
+  padding: 6.4rem 0 0 0;
 }
 
 .service-sidebar.col-lg-2 {
@@ -2948,7 +2981,7 @@ p.test-card-text {
   font-size: 27px;
   text-align: start;
   margin-bottom: 30px;
-  padding-left: 20px;
+  padding-left: 50px;
 }
 
 .side-services {
@@ -2990,6 +3023,7 @@ p.test-card-text {
 
 .service-sec {
   padding: 5rem 20px;
+  overflow: hidden;
 }
 
 .service-sec h2 {
@@ -3002,24 +3036,55 @@ p.test-card-text {
   position: relative;
 }
 
+.serv-sec-2 .row{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+
 .service-sec img {
   margin-top: 50px;
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
+}
+
+.serv-sec-1 img {
+  margin-left:20px;
+}
+
+.serv-sec-1 .text-sec {
+  padding-right: 2rem;
 }
 
 .service-sec h3 {
   font-family: var(--secondary-font-family);
-  font-size: 45px;
+  font-size: 40px;
   margin-bottom: 30px;
   line-height: 1.5;
 }
 
 .service-sec p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 2;
 }
 
 .text-sec {
   margin-top: 40px;
+}
+
+.serv-sec-2 img {
+  width: 450px;
+  height: 450px;
+  margin-left: -20px;
+}
+
+.serv-sec-2 {
+  margin-block: 4rem;
+  padding-top: 2rem;
+}
+
+.serv-sec-2 .text-sec {
+  margin-top: 30px;
+  padding-top: 2rem;
+  padding-right: 2rem;
 }

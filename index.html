@@ -19,7 +19,7 @@
     <main>
         <section id="hero" class="hero">
             <button class="popup-trigger get-in-touch-wrap" id="popup-trigger">
-                Need assistance?
+                Get started
             </button>
             <nav id="NavBar" class="navbar navbar-expand-lg">
                 <div class="container-fluid">
@@ -33,7 +33,7 @@
                         <span class="navbar-toggler-icon" id="toggle"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mb-2 mb-lg-0 mx-auto ms-5" id="NavBar">
+                        <ul class="navbar-nav mb-2 mb-lg-0 mx-auto ms-lg-5" id="NavBar">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                             </li>
@@ -92,7 +92,7 @@
                                 <span>
                                     Western Book Publishing
                                 </span> 
-                                that redefines the way Books Are Published:
+                                that redefines the way Books Are Published
                             </h1>
                             <p>
                                 Welcome to Western Book publishing, a visionary force reshaping the core 
@@ -141,7 +141,7 @@
                                                     placeholder="I'm Looking For........." rows="3" required></textarea>
                                             </div>
                                         </div>
-                                        <div class="col-12 check-box pt-2 pb-1 mt-lg-3">
+                                        <div class="col-12 check-box pt-2 pb-1">
                                             <label class="check me-2">
                                                 <input type="checkbox" />
                                                 <div class="checkmark"></div>
@@ -161,7 +161,7 @@
                                     <a href="#" class="contact-btn">
                                         <button class="custom-btn" type="button">
                                             <span class="button__text">Send Message</span>
-                                            <span class="button__icon"><i class="fa-solid fa-paper-plane"></i></span>
+                                            <span class="button__icon" style="color: #fff;"><i class="fa-solid fa-paper-plane"></i></span>
                                         </button>
                                     </a>
                                 </form>
@@ -202,6 +202,9 @@
                     <div>
                         <img src="assets/images/Platform Logos/slide10.png" alt="" />
                     </div>
+                    <div>
+                        <img src="assets/images/Platform Logos/slide11.png" alt="" />
+                    </div>
                 </div>
             </div>
         </section>
@@ -211,7 +214,7 @@
                 <img src="assets/images/9216429 copy.png" alt="" />
             </div>
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center overflow-hidden">
                     <div class="col-lg-6 col-md-6 col-12 mt-5 pt-3 sec-1">
                         <h3 class="text-capitalize">
                             A book publishing company that redefines the way books are
@@ -244,7 +247,7 @@
                 <img src="assets/images/9216429 copy.png" alt="" />
             </div>
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center overflow-hidden">
                     <div class="col-lg-7 col-md-6 col-12 sec-2 mt-lg-5 ms-2">
                         <img src="assets/images/3.png" alt="" />
                     </div>
@@ -843,16 +846,45 @@
     <!-- WHATSAPP BUTTON -->
     <div class="whatsapp">
         <button class="whatsapp-btn" id="popup-trigger">
-            <span>WhatsApp</span><i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-whatsapp"></i>
         </button>
     </div>
 
+    <!-- scroll to top -->
     <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
     </div>
 
+    <!-- SHARE BUTTON -->
+    <div class="share-menu">
+        <div class="btn_toggle">
+            <ion-icon name="share-social"></ion-icon>
+        </div>
+
+        <li style="--i:0;--clr:#1877f2">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+        <li style="--i:1;--clr:#E4405F">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li style="--i:2;--clr:#0A66C2">
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </li>
+    </div>
+
+
+    <!-- SHARE BTN JS -->
+    <script>
+        const menu = document.querySelector(".share-menu");
+        const toggle = document.querySelector(".btn_toggle");
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/fontawesome.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>

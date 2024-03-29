@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/slick.min.css" />
     <link rel="stylesheet" href="css/unicons.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -21,7 +22,7 @@
     <main>
         <section id="hero" class="hero">
             <button class="popup-trigger get-in-touch-wrap" id="popup-trigger">
-                Need assistance?
+                Get started
             </button>
             <nav id="NavBar" class="navbar navbar-expand-lg">
                 <div class="container-fluid">
@@ -83,8 +84,8 @@
                 <section class="header">
                     <div class="header-sec1 col-lg-8 col-12">
                         <div class="main-text">
-                            <h1 class="mb-0 animate__animated animate__backInUp animate__slow">
-                                A Western Book Publishing that redefines the way Books Are Published:
+                            <h1 class="mb-0 animate__animated animate__backInUp animate__slow d-inline-block">
+                                A Western Book Publishing that redefines the way Books Are Published
                             </h1>
                             <p class="animate__animated animate__fadeInDown animate__slow">
                                 Welcome to Western Book publishing, a visionary force reshaping the core
@@ -108,7 +109,7 @@
                     </div>
                     <div class="header-sec2 col-lg-4">
                         <div
-                            class="get-started col-lg-9 col-10 mt-0 mt-lg-2 animate__animated animate__fadeInRight animate__delay-1s">
+                            class="get-started col-lg-9 col-10 mt-0 mt-lg-2 animate__animated animate__fadeInRight animate__slow">
                             <h1>let's get started</h1>
                             <div class="form">
                                 <form action="">
@@ -157,30 +158,28 @@
                                     <a href="#" class="contact-btn">
                                         <button class="custom-btn" type="button">
                                             <span class="button__text">Send Message</span>
-                                            <span class="button__icon"><i class="fa-solid fa-paper-plane"></i></span>
+                                            <span class="button__icon" style="color: #fff;"><i class="fa-solid fa-paper-plane"></i></span>
                                         </button>
                                     </a>
                                 </form>
                             </div>
                         </div>
                     </div>
+                    <!-- <a href="#services" class="smoothscroll">
+                        <div class="down_arrow d-flex flex-column justify-content-center align-items-center">
+                          <img src="images/services/down-book.png" alt="" />
+                          <img src="images/services/down-arrow.png" alt="" />
+                        </div>
+                      </a> -->
                 </section>
             </header>
         </section>
 
-        <section class="service-body">
+        <section class="service-body" id="services">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-3 col-lg-2 service-sidebar">
+                <div class="row justify-content-center">
+                    <!-- <div class="col-md-3 col-lg-2 service-sidebar collapse" id="services-siderbar">
                         <aside>
-                            <!-- <div class="toggle_btn">
-                                <input type="checkbox" id="checkbox">
-                                <label for="checkbox" class="toggle">
-                                    <div class="bars" id="bar1"></div>
-                                    <div class="bars" id="bar2"></div>
-                                    <div class="bars" id="bar3"></div>
-                                </label>
-                            </div> -->
                             <div class="container-fluid px-lg-0">
                                 <h1>services</h1>
                                 <ul class="side-services">
@@ -247,13 +246,23 @@
                                 </ul>
                             </div>
                         </aside>
-                    </div>
-                    <div class="col-md-9 col-lg-10 service-sec">
+                    </div> -->
+                    <div class="col-12 col-md-12 col-lg-12 service-sec">
+                        <!-- <div class="toggle_btn" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#services-siderbar" aria-controls="services-siderbar" aria-expanded="true"
+                            aria-label="Toggle navigation">
+                            <input type="checkbox" id="checkbox">
+                            <label for="checkbox" class="toggle" id="toggle">
+                                <div class="bars" id="bar1"></div>
+                                <div class="bars" id="bar2"></div>
+                                <div class="bars" id="bar3"></div>
+                            </label>
+                        </div> -->
                         <h2>Experience the enchantment of story-telling</h2>
                         <div class="container serv-sec-1">
                             <div class="row">
-                                <div class="col-md-7 text-sec">
-                                    <h3>Enhance your fiction with our professional ghost-writing service!</h3>
+                                <div class="col-12 col-md-7 text-sec" data-aos="zoom-out-down" data-aos-duration="1500">
+                                    <h3 data-aos="fade-left" data-aos-duration="1500">Enhance your fiction with our professional ghost-writing service!</h3>
                                     <p>
                                         Unlock the full power of your creativity with our top-notch fiction
                                         ghostwriter services! Our skilled authors weave captivating stories filed
@@ -265,8 +274,27 @@
                                         lofty expectations.
                                     </p>
                                 </div>
+                                <div class="col-12 col-md-5">
+                                    <img data-aos="fade-right" data-aos-duration="1500" src="images/services/sp1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container serv-sec-2">
+                            <div class="row">
+                                <div class="col-md-7 text-sec" data-aos="fade-right" data-aos-duration="1500">
+                                    <h3 data-aos="zoom-out-up" data-aos-duration="1500">Bring your ideas to life: Experts Non-Fiction Ghostwriting</h3>
+                                    <p>
+                                        Your non-fiction book is more than simply words on paper it reflects your
+                                        knowledge, wisdom, and life experiences. Our non-fiction service is geared
+                                        to highlighting your distinct voice in every sentence. Our skilled writers
+                                        excel in a variety of genres, including biographies, memoirs, and self-help
+                                        books. Trust us to translate your ideas into a fascinating tale that will
+                                        resonate with people all around the world, setting the standard for
+                                        excellence.
+                                    </p>
+                                </div>
                                 <div class="col-md-5">
-                                    <img src="images/services/sp1.jpg" alt="">
+                                    <img data-aos="fade-left" data-aos-duration="1500" src="images/services/sp2.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -714,23 +742,6 @@
     </div>
 
 
-    <!-- SHARE BUTTON -->
-
-    <div class="share-menu">
-        <div class="btn_toggle">
-            <ion-icon name="share-social"></ion-icon>
-        </div>
-
-        <li style="--i:0;--clr:#1877f2">
-            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-        </li>
-        <li style="--i:1;--clr:#25d366">
-            <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
-        </li>
-        <li style="--i:2;--clr:#1da1f2">
-            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-        </li>
-    </div>
 
     <!-- WHATSAPP BUTTON -->
     <div class="whatsapp">
@@ -746,13 +757,31 @@
         </svg>
     </div>
 
+    <!-- SHARE BUTTON -->
+    <div class="share-menu">
+        <div class="btn_toggle">
+            <ion-icon name="share-social"></ion-icon>
+        </div>
+
+        <li style="--i:0;--clr:#1877f2">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+        <li style="--i:1;--clr:#E4405F">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li style="--i:2;--clr:#0A66C2">
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </li>
+    </div>
+
+
     <!-- SHARE BTN JS -->
     <script>
         const menu = document.querySelector(".share-menu");
         const toggle = document.querySelector(".btn_toggle");
         toggle.addEventListener("click", () => {
             menu.classList.toggle("active");
-        })
+        });
     </script>
     <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
     <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
@@ -761,7 +790,10 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/uikit.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
+
+    
 
     <!-- COUNTER -->
     <script>
@@ -796,109 +828,11 @@
             }
         }
     </script>
-
-
-    <!-- PORTFOLIO SECTION JS -->
+    <!-- ANIMATE ON SCROLL -->
     <script>
-        var carousel = $(".carousel"),
-            items = $(".item"),
-            currdeg = 0,
-            intervalId = null,
-            rotationInProgress = false;
+        AOS.init();
+      </script>
 
-        var mouseDownX = 0;
-        var mouseUpX = 0;
-
-        $(".carousel").on("mousedown", function (event) {
-            mouseDownX = event.pageX;
-            stopRotation();
-        });
-
-        $(".carousel").on("mousemove", function (event) {
-            if (mouseDownX !== 0) {
-                mouseUpX = event.pageX;
-            }
-        });
-
-        $(".carousel").on("mouseup", function (event) {
-            if (mouseDownX !== 0) {
-                handleSwipe();
-            }
-            mouseDownX = 0;
-            mouseUpX = 0;
-            startRotation();
-        });
-
-        function handleSwipe() {
-            var swipeThreshold = 50; // Minimum swipe distance required to trigger a rotation
-
-            if (mouseUpX - mouseDownX > swipeThreshold) {
-                // Swipe right
-                rotate({ data: { d: "p" } });
-            } else if (mouseDownX - mouseUpX > swipeThreshold) {
-                // Swipe left
-                rotate({ data: { d: "n" } });
-            }
-        }
-
-        function rotate(e) {
-            if (rotationInProgress) {
-                return; // Ignore rotation request if it's already in progress
-            }
-
-            rotationInProgress = true;
-
-            if (e.data.d == "n") {
-                currdeg = currdeg - 60;
-            }
-            if (e.data.d == "p") {
-                currdeg = currdeg + 60;
-            }
-            carousel.css({
-                "-webkit-transform": "rotateY(" + currdeg + "deg)",
-                "-moz-transform": "rotateY(" + currdeg + "deg)",
-                "-o-transform": "rotateY(" + currdeg + "deg)",
-                "transform": "rotateY(" + currdeg + "deg)"
-            });
-            items.css({
-                "-webkit-transform": "rotateY(" + (-currdeg) + "deg)",
-                "-moz-transform": "rotateY(" + (-currdeg) + "deg)",
-                "-o-transform": "rotateY(" + (-currdeg) + "deg)",
-                "transform": "rotateY(" + (-currdeg) + "deg)"
-            });
-
-            setTimeout(function () {
-                rotationInProgress = false;
-            }, 1000); // Set rotationInProgress to false after 1 second to allow rotation to complete
-        }
-
-        function startRotation() {
-            if (intervalId === null) {
-                intervalId = setInterval(function () {
-                    rotate({ data: { d: "n" } });
-                }, 2000);
-            }
-        }
-
-        function stopRotation() {
-            if (intervalId !== null) {
-                clearInterval(intervalId);
-                intervalId = null;
-            }
-        }
-
-        // Start the rotation initially
-        startRotation();
-
-        // Detect visibility change and stop/start rotation accordingly
-        document.addEventListener("visibilitychange", function () {
-            if (document.visibilityState === "hidden") {
-                stopRotation();
-            } else if (document.visibilityState === "visible") {
-                startRotation();
-            }
-        });
-    </script>
 </body>
 
 </html>

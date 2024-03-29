@@ -18,7 +18,7 @@
     <main>
         <section id="hero" class="contact-hero">
             <button class="popup-trigger get-in-touch-wrap" id="popup-trigger">
-                Need assistance?
+                Get started
             </button>
             <nav id="NavBar" class="navbar navbar-expand-lg">
                 <div class="container-fluid">
@@ -471,7 +471,7 @@
     <!-- WHATSAPP BUTTON -->
     <div class="whatsapp">
         <button class="whatsapp-btn" id="popup-trigger">
-            <span>WhatsApp</span><i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-whatsapp"></i>
         </button>
     </div>
 
@@ -482,6 +482,34 @@
         </svg>
     </div>
 
+    <!-- SHARE BUTTON -->
+    <div class="share-menu">
+        <div class="btn_toggle">
+            <ion-icon name="share-social"></ion-icon>
+        </div>
+
+        <li style="--i:0;--clr:#1877f2">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+        <li style="--i:1;--clr:#E4405F">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li style="--i:2;--clr:#0A66C2">
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </li>
+    </div>
+
+
+    <!-- SHARE BTN JS -->
+    <script>
+        const menu = document.querySelector(".share-menu");
+        const toggle = document.querySelector(".btn_toggle");
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
 
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/fontawesome.min.js"></script>
