@@ -657,8 +657,8 @@ button.get-in-touch-wrap-r:hover {
 
 .header-hero  {
   position: relative;
-  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), #01267b88, rgba(0, 0, 0, 0.6), #a9121589), url(../images/bg-1.png);
-  /* background-color: #0e0e64; */
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.667), #01267baa, 
+  rgba(0, 0, 0, 0.683), #a912159d), url(../images/aboutus-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
