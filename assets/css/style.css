@@ -674,7 +674,7 @@ button.get-in-touch-wrap-r:hover {
 .video-wrap img{
   position: absolute;
   width: 28rem;
-  height: 87dvh;
+  height: 85.5dvh;
   top: 5rem;
   left: 45%;
   object-fit: contain;
@@ -774,7 +774,7 @@ button.get-in-touch-wrap-r:hover {
 }
 
 .navbar-toggler .navbar-toggler-icon {
-  background: #000;
+  background: #fff;
   transition: background 10ms 300ms ease;
   display: block;
   width: 30px;
@@ -784,7 +784,7 @@ button.get-in-touch-wrap-r:hover {
 
 .navbar-toggler .navbar-toggler-icon:before,
 .navbar-toggler .navbar-toggler-icon:after {
-  background: #000;
+  background: #fff;
   transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
   transition: top 300ms 350ms ease, transform 300ms 50ms ease;
   transition: top 300ms 350ms ease, transform 300ms 50ms ease,
@@ -913,7 +913,7 @@ button.get-in-touch-wrap-r:hover {
 
 .header-sec1 .main-text {
   color: #fff;
-  margin: 30dvh 0 2rem 2rem;
+  margin: 28dvh 0 2rem 1.5rem;
   width: 38rem;
 }
 
@@ -925,18 +925,8 @@ button.get-in-touch-wrap-r:hover {
 }
 
 .amz-img img {
-  width: 120px;
-  height: 40px;
-  margin-inline: 10px;
-}
-.amz-img img:nth-child(1) {
-  margin-inline: 0;
-  width: 60px;
-  height: 60px;
-}
-.amz-img img:last-child {
-  width: 90px;
-  height: 30px;
+  width: 500px;
+  height: 45px;
 }
 
 .main-text h1 {
