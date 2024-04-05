@@ -2835,8 +2835,7 @@ p.test-card-text {
 
 .ghost-hero  {
   position: relative;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),  url(../images/bg-01.jpg);
-  /* background-color: #0e0e64; */
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),  url(../images/gw-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3074,4 +3073,10 @@ p.test-card-text {
   margin-top: 30px;
   padding-top: 2rem;
   padding-right: 2rem;
+}
+
+/* books publishing page */
+
+.book-hero {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),  url(../images/bp-bg.jpg);
 }
