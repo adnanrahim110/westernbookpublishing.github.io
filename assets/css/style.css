@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
+
+/* MONTSERRAT */
+/* VARIABLE FONT WEIGHT */
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/montserrat/Montserrat-VariableFont_wght.ttf);
+}
 
 /* ROUNDKEY */
 /* light */
@@ -980,7 +987,7 @@ button.get-in-touch-wrap-r:hover {
 .get-started .form-control {
   border: 0;
   margin-block: 3px;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .get-started .wave-group {
@@ -1103,7 +1110,7 @@ button.get-in-touch-wrap-r:hover {
   top: 0.1em;
   width: 0.25em;
   height: 0.5em;
-  border: solid white;
+  border: solid #fff;
   border-width: 0 0.15em 0.15em 0;
   transform: rotate(45deg);
 }
@@ -2739,7 +2746,7 @@ img.cta-img {
 
 
 /* ------------------------------------------------------------------------------------
-                                  ABOUT US PAGE
+                                  TESTIMONIAL PAGE
 ------------------------------------------------------------------------------------ */
 
 .test-section {
@@ -2780,8 +2787,8 @@ img.cta-img {
   transition: 0.5s;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 470px;
+  align-items: start;
+  height: 430px;
   position: relative;
   z-index: 2 ;
 }
@@ -2792,33 +2799,45 @@ img.cta-img {
 }
 
 h5.test-card-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  transition: 0.5s;
   margin-bottom: 1rem;
+  transition: 0.5s;
   text-align: center;
 }
 
 .test-card-body .quote {
   transition: 0.5s;
   position: absolute;
+  display: flex;
+  color: #7d7d7d;
+}
+
+.quote h6 {
+  font-size: 14px;
+  margin-inline: 10px;
 }
 
 .test-card:hover .quote {
-  left: 3rem;
+  left: .5rem;
   right: 0;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   margin: 0 auto;
   top: 4rem;
   bottom: 0;
-  font-size: 250px;
+  font-size: 80px;
   color: #00000014;
+}
+
+.test-card:hover .quote h6 {
+  font-size: 60px;
 }
 
 p.test-card-text {
   color: #000;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .fa-quote-right:before {
@@ -2846,8 +2865,12 @@ p.test-card-text {
 
 .ghost-hero .header-sec1 .main-text {
   color: #fff;
-  margin: 30dvh 0 2rem 3rem;
+  margin: 35dvh 0 2rem 3rem;
   width: 45rem;
+}
+
+.ghost-hero .header-sec1 .main-text h1 {
+  margin-bottom: 20px;
 }
 
 .gst-btns {
@@ -3079,4 +3102,24 @@ p.test-card-text {
 
 .book-hero {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),  url(../images/bp-bg.jpg);
+}
+
+/* ebook publishing page */
+.ebook-hero {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),  url(../images/eb-bg.jpg);
+}
+
+/* proofreading page */
+.proof-hero {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),  url(../images/pr-bg.jpg);
+}
+
+.proof-hero .serv-sec-2 img {
+  height: 350px;
+  width: 400px;
+}
+
+/* promotions page */
+.prom-hero {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),  url(../images/bpm.bg.jpg);
 }
