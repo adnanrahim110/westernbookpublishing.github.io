@@ -3152,3 +3152,83 @@ p.test-card-text {
 .format-hero {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),  url(../images/fl-bg.png);
 }
+
+/* wwd section */
+.wwd {
+  position: relative;
+  padding: 0;
+  backdrop-filter: blur(10px);
+}
+
+.wwd .container-fluid {
+  padding-inline: 40px;
+}
+
+.wwd-title h2 {
+  font-family: var(--secondary-font-family);
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.wwd-content {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.wwd-content .col-md-4 {
+  padding: 0 16px;
+}
+
+.wwd-box  {
+  background-color: #fdfdfd;
+  height: 315px;
+  border: 1px solid #dddddd;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s linear;
+}
+
+.wwd-box hr {
+  width: 100%;
+  color: #b1b1b1;
+}
+
+
+.wwd-icon{
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.wwd-icon img {
+  width: 60px;
+  height: 60px;
+}
+
+.wwd-box .wwd-text {
+  padding: 10px 20px;
+}
+
+.wwd-text h5 {
+  margin-top: 15px;
+  font-size: 18px;
+  font-family: var(--h-font-family);
+}
+
+.wwd-text p {
+  margin-top: 20px;
+  padding-inline: 15px;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.pm-text h5 {
+  font-size: 16px;
+}
+
+.ci-text p {
+  font-size: 12px;
+}
