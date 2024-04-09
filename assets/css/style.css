@@ -3101,7 +3101,7 @@ p.test-card-text {
 /* books publishing page */
 
 .book-hero {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),  url(../images/bp-bg.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),  url(../images/bp-bg.png);
 }
 
 /* ebook publishing page */
@@ -3121,5 +3121,34 @@ p.test-card-text {
 
 /* promotions page */
 .prom-hero {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),  url(../images/bpm.bg.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),  url(../images/bpm-bg.png);
+}
+
+.prom .service-sec img  {
+  height: 300px;
+}
+
+/* author web page */
+.author-hero {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),  url(../images/aw-bg.jpg);
+}
+
+/* custommized illustration page */
+.ill-hero {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),  url(../images/ci-bg.jpg);
+}
+
+/* book and cover art page */
+.art-hero {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),  url(../images/bc-bg.png);
+}
+
+/* book and cover art page */
+.audio-hero {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),  url(../images/ab-bg.jpg);
+}
+
+/* book and cover art page */
+.format-hero {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),  url(../images/fl-bg.png);
 }
