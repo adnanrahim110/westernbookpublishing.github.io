@@ -248,7 +248,7 @@ body::-webkit-scrollbar-thumb {
 
 .share-menu {
   position: fixed;
-  z-index: 9999;
+  z-index: 5;
   width: 250px;
   height: 250px;
   display: flex;
@@ -284,7 +284,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .share-menu li {
-  z-index: 9999;
+  z-index: 5;
   position: absolute;
   left: 0;
   list-style: none;
@@ -667,6 +667,9 @@ button.get-in-touch-wrap-r:hover {
   background-repeat: no-repeat;
   height: 100dvh;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -676,11 +679,10 @@ button.get-in-touch-wrap-r:hover {
 
 .video-wrap img{
   position: absolute;
-  width: 28rem;
-  height: 85.5dvh;
-  top: 5rem;
-  left: 45%;
-  object-fit: contain;
+  width: auto;
+  height: 80dvh;
+  bottom: 0;
+  left: 48%;
 }
 
 .custom-video {
@@ -905,6 +907,7 @@ button.get-in-touch-wrap-r:hover {
 .header {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .header-sec1 {
@@ -916,8 +919,7 @@ button.get-in-touch-wrap-r:hover {
 
 .header-sec1 .main-text {
   color: #fff;
-  margin: 28dvh 0 2rem 1.5rem;
-  width: 38rem;
+  padding: 10rem 1rem 0 1rem;
 }
 
 .amz-img {
@@ -1887,7 +1889,7 @@ footer .footer-about .ft-logo {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
   text-decoration: none;
   transition: var(--trans-property);
-  z-index: 1;
+  z-index: 9;
 }
 
 .social-icons li::after {
