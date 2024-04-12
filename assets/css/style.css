@@ -660,8 +660,8 @@ button.get-in-touch-wrap-r:hover {
 
 .header-hero  {
   position: relative;
-  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.667), #01267baa, 
-  rgba(0, 0, 0, 0.683), #a912159d), url(../images/aboutus-bg.jpg);
+  background-image: linear-gradient(to bottom , rgba(0, 0, 0, 0.667), #01267baa, rgba(0, 0, 0, 0.9),
+  rgb(0, 0, 0)), url(../images/aboutus-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -923,10 +923,10 @@ button.get-in-touch-wrap-r:hover {
 }
 
 .amz-img {
-  margin-top: 5px;
+  margin-top: 20px;
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: end;
 }
 
 .amz-img img {
@@ -936,7 +936,14 @@ button.get-in-touch-wrap-r:hover {
 
 .main-text h1 {
   font-family: "roundkey-bold";
-  font-size: 3rem;
+  font-size: 2.8rem;
+  font-style: italic;
+  display: inline;
+  line-height: .9;
+}
+.main-text h1 span{
+  font-family: "roundkey-bold";
+  font-size: 3.5rem;
   font-style: italic;
   display: inline;
 }
@@ -944,6 +951,7 @@ button.get-in-touch-wrap-r:hover {
 .main-text p {
   font-size: 14px;
   font-weight: 600;
+  margin-top: 30px;
 }
 
 
