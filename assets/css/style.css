@@ -682,7 +682,7 @@ button.get-in-touch-wrap-r:hover {
   width: auto;
   height: 80dvh;
   bottom: 0;
-  left: 48%;
+  left: 49%;
 }
 
 .custom-video {
@@ -920,6 +920,7 @@ button.get-in-touch-wrap-r:hover {
 .header-sec1 .main-text {
   color: #fff;
   padding: 10rem 1rem 0 1rem;
+  text-align: justify;
 }
 
 .amz-img {
@@ -936,22 +937,23 @@ button.get-in-touch-wrap-r:hover {
 
 .main-text h1 {
   font-family: "roundkey-bold";
-  font-size: 2.8rem;
-  font-style: italic;
+  font-size: 3.5rem;
   display: inline;
   line-height: .9;
 }
-.main-text h1 span{
+.main-text h1 .hh-span{
   font-family: "roundkey-bold";
-  font-size: 3.5rem;
-  font-style: italic;
-  display: inline;
+  text-align: start;
+  font-size: 2.8rem;
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  /* white-space: nowrap; */
 }
 
 .main-text p {
   font-size: 14px;
   font-weight: 600;
-  margin-top: 30px;
 }
 
 
@@ -2764,27 +2766,6 @@ img.cta-img {
   padding-bottom: 5rem;
 }
 
-.test-section::after {
-  content: "TESTIMONIALS";
-  justify-content: center;
-  display: flex;
-  -webkit-text-stroke: 2px #000;
-  font-size: 180px;
-  left: 20px;
-  font-weight: 600;
-  right: 0;
-  position: absolute;
-  top: -50px;
-  justify-content: center;
-  display: flex;
-  color: #fff;
-  -webkit-text-stroke: 1px #0000000a;
-  font-family: "Agency FB";
-  z-index: 1;
-  letter-spacing: 35px;
-  transition: 0.7s;
-}
-
 .test-section:hover::after {
   letter-spacing: unset;
 }
@@ -2875,7 +2856,7 @@ p.test-card-text {
 
 .ghost-hero .header-sec1 .main-text {
   color: #fff;
-  margin: 35dvh 0 2rem 3rem;
+  margin: 0 0 2rem 3rem;
   width: 45rem;
 }
 
