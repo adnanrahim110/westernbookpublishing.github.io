@@ -1,5 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
-
 /* MONTSERRAT */
 /* VARIABLE FONT WEIGHT */
 @font-face {
@@ -948,7 +946,7 @@ button.get-in-touch-wrap-r:hover {
   display: inline-block;
   overflow: hidden;
   border-right: .15em solid orange;
-  /* white-space: nowrap; */
+  white-space: nowrap;
 }
 
 .main-text p {
@@ -2862,6 +2860,7 @@ p.test-card-text {
 
 .ghost-hero .header-sec1 .main-text h1 {
   margin-bottom: 20px;
+  text-align: start;
 }
 
 .gst-btns {
