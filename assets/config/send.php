@@ -63,14 +63,14 @@ if (isset($_POST['c_sub_btn'])) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'syedamin.prohub@gmail.com';
-        $mail->Password = 'bgmh szue ekts ijuu';
+        $mail->Username = 'adnankaka.786110@gmail.com';
+        $mail->Password = 'xcvk pfwy wwkf bfbo';
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
         $mail->setfrom($c_email);
 
-        $mail->addAddress('syedamin.prohub@gmail.com');
+        $mail->addAddress('info@westernbookpublishing.com');
 
         $mail->isHTML(true);
 
