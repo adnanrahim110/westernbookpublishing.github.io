@@ -112,16 +112,29 @@
                                             typing 5s steps(50, end),
                                             blink-caret 1s step-end infinite;
                                     }
+
                                     /* The typing effect */
                                     @keyframes typing {
-                                        from {width: 0}
-                                        to {width: 100%}
+                                        from {
+                                            width: 0
+                                        }
+
+                                        to {
+                                            width: 100%
+                                        }
                                     }
+
                                     /* The typewriter cursor effect */
                                     @keyframes blink-caret {
+
                                         from,
-                                        to {border-color: transparent}
-                                        50% {border-color: orange;}
+                                        to {
+                                            border-color: transparent
+                                        }
+
+                                        50% {
+                                            border-color: orange;
+                                        }
                                     }
                                 </style>
                             </h1>
@@ -731,7 +744,8 @@
                 WANT TO WORK WITH US?
             </div>
             <div class="contact-form pb-2 px-4">
-                <form id="requestquote1" name="sentMessage" class="mt-1" role="form" action="assets/config/send.php" method="POST">
+                <form id="requestquote1" name="sentMessage" class="mt-1" role="form" action="assets/config/send.php"
+                    method="POST">
                     <div class="row">
                         <div class="col-lg-6 col-12">
                             <div class="wave-group form-control">
