@@ -1,3 +1,4 @@
+
 // STICKY NAVBAR
 const header = document.querySelector('#NavBar');
 
@@ -8,7 +9,6 @@ window.addEventListener('scroll', () => {
     header.classList.remove('sticky');
   }
 });
-
 
 // PORTFOLIO SECTION
 var carousel = $(".carousel"),
