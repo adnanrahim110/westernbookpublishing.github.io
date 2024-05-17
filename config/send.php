@@ -1,5 +1,14 @@
 <?php
 session_start();
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require '../vendor/phpmailer/phpmailer/src/Exception.php';
+require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require '../vendor/phpmailer/phpmailer/src/SMTP.php';
+
+require '../vendor/autoload.php';
 function redirect($url, $message)
 {
     $_SESSION['message'] = $message;
@@ -9,14 +18,41 @@ function topheading($heading)
 {
     $_SESSION['topheading'] = $heading;
 }
+function getUserIP()
+{
+    if (array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER) && !empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        if (strpos($_SERVER['HTTP_X_FORWARDED_FOR'], ',') !== false) {
+            $ip_addresses = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+            return trim($ip_addresses[0]);
+        } else {
+            return $_SERVER['HTTP_X_FORWARDED_FOR'];
+        }
+    } else {
+        return $_SERVER['REMOTE_ADDR'];
+    }
+}
+$user_ip = getUserIP();
+function getIPInfo($ip)
+{
+    // Make a request to ipinfo.io API to get IP information
+    $ip_info_json = file_get_contents("https://ipinfo.io/$ip/json");
 
-use PHPMailer\PHPMailer\PHPMailer;
+    // Decode the JSON response
+    $ip_info = json_decode($ip_info_json, true);
 
-require 'phpmailer/src/Exception.php';
-require 'phpmailer/src/PHPMailer.php';
-require 'phpmailer/src/SMTP.php';
+    // Return IP information
+    return $ip_info;
+}
 
-// Get form data
+$ip_info = getIPInfo($user_ip);
+
+$ip = $ip_info['ip'];
+$city = $ip_info['city'];
+$region = $ip_info['region'];
+$country = $ip_info['country'];
+$location = $ip_info['loc'];
+$organization = $ip_info['org'];
+
 if (isset($_POST['add_client_btn'])) {
     $mail = new PHPMailer(true);
 
@@ -32,22 +68,42 @@ if (isset($_POST['add_client_btn'])) {
     $mail->SMTPAuth = true;
     $mail->Username = 'adnankaka.786110@gmail.com';
     $mail->Password = 'xcvk pfwy wwkf bfbo';
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
 
     $mail->setFrom($email);
 
-    $mail->addAddress('chrisparker@westernbookpublishing.com');
+    $mail->addAddress('chrisparker@westernbookpublishing.com', $_POST['name']);
 
     $mail->isHTML(true);
 
-    $mail->Subject = 'test';
+    $mail->Subject = 'Sign Up';
 
-    $mail->Body = "Name: $name <br> 
-                    Email: $email <br> 
-                    Phone: $phone <br> 
-                    Service Type: $service <br> 
-                    Message: $message";
+    $mail->Body = 
+        'Name: ' . $name . '<br>' .
+        'Email: ' . $email . '<br>' .
+        'Phone: ' . $phone . '<br>' .
+        'Service Type: ' . $service . '<br>' .
+        'Message: ' . $message . '<br>' .
+        'IP Address: ' . $user_ip . '<br>' .
+        'City: ' . $city . '<br>' .
+        'Region: ' . $region . '<br>' .
+        'Country: ' . $country . '<br>' .
+        'Organization: ' . $organization . '<br>' .
+        'From: ' . $email;
+
+    $mail->AltBody = 
+        'Name: ' . $name . '\n' .
+        'Email: ' . $email . '\n' .
+        'Phone: ' . $phone . '\n' .
+        'Service Type: ' . $service . '<br>' .
+        'Message: ' . $message . '\n' .
+        'IP Address: ' . $user_ip . '<br>' .
+        'City: ' . $city . '<br>' .
+        'Region: ' . $region . '<br>' .
+        'Country: ' . $country . '<br>' .
+        'Organization: ' . $organization . '<br>' .
+        'From: ' . $email;
 
     if ($mail->send()) {
         redirect("../index", "Thank you for submitting your query to <span style=\"color: #ed1c21;\">Western Book Publishing</span><br> 
@@ -71,21 +127,40 @@ if (isset($_POST['add_client_btn'])) {
     $mail->SMTPAuth = true;
     $mail->Username = 'adnankaka.786110@gmail.com';
     $mail->Password = 'xcvk pfwy wwkf bfbo';
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
 
     $mail->setFrom($cemail);
 
-    $mail->addAddress('chrisparker@westernbookpublishing.com');
+    $mail->addAddress('chrisparker@westernbookpublishing.com', $_POST['name']);
 
     $mail->isHTML(true);
 
     $mail->Subject = 'test';
 
-    $mail->Body = "Name: $cname <br> 
-                    Email: $cemail <br> 
-                    Phone: $cphone <br> 
-                    Message: $cmessage";
+    $mail->Body = 
+        'Name: ' . $cname . '<br>' .
+        'Email: ' . $cemail . '<br>' .
+        'Phone: ' . $cphone . '<br>' .
+        'Message: ' . $cmessage . '<br>' .
+        'IP Address: ' . $user_ip . '<br>' .
+        'City: ' . $city . '<br>' .
+        'Region: ' . $region . '<br>' .
+        'Country: ' . $country . '<br>' .
+        'Organization: ' . $organization . '<br>' .
+        'From: ' . $cemail;
+
+    $mail->AltBody = 
+        'Name: ' . $cname . '\n' .
+        'Email: ' . $cemail . '\n' .
+        'Phone: ' . $cphone . '\n' .
+        'Message: ' . $cmessage . '\n' .
+        'IP Address: ' . $user_ip . '<br>' .
+        'City: ' . $city . '<br>' .
+        'Region: ' . $region . '<br>' .
+        'Country: ' . $country . '<br>' .
+        'Organization: ' . $organization . '<br>' .
+        'From: ' . $cemail;
 
     if ($mail->send()) {
         redirect("../index", "Thank you for submitting your query to <span style=\"color: #ed1c21;\">Western Book Publishing</span><br> 
